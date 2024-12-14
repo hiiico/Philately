@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+<main>
+    <form class="welcome add-offer-form" method="post" action="/stamps/add-stamps" th:object="${addStampDTO}">
+        <h1 class="text-center mt-2"><span class="badge badge-pill badge-dark">Add stamp</span></h1>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="name" class="h4 mb-2">Name</label>
+            </div>
+            <input type="text" class="form-control" id="name" name="name" th:field="*{name}"/>
+            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="bg-danger text-light rounded">Name error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="description" class="h4 mb-2">Description</label>
+            </div>
+            <input type="text"  class="form-control" id="description" name="description" th:field="*{description}"/>
+            <small th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="bg-danger text-light rounded">Description error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="imageUrl" class="h4 mb-2">Image URL</label>
+            </div>
+            <textarea type="text" class="form-control" id="imageUrl" name="imageUrl" th:field="*{imageUrl}"></textarea>
+            <small th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}" class="bg-danger text-light rounded">Image URL error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="price" class="h4 mb-2">Price</label>
+            </div>
+            <input type="number" class="form-control" id="price" name="price" th:field="*{price}"/>
+            <small th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="bg-danger text-light rounded">Price error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-center">
+                <label for="paper" class="h4 mb-2">Paper</label>
+            </div>
+            <select class="browser-default custom-select" id="paper" name="paper">
+                <option th:value="*{paper}">Select paper</option>
+                <option th:each="paper : ${papers}" th:value="${paper}" th:text="${paper}"></option>
+            </select>
+
+            <small th:if="${#fields.hasErrors('paper')}" th:errors="*{paper}" class="bg-danger text-light rounded">Paper error message</small>
+        </div>
+
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn btn-info  mb-3">Add stamp</button>
+        </div>
+
+    </form>
+</main>
+<footer th:replace="~{fragments/commons::footer}"></footer>
+</body>
+</html>

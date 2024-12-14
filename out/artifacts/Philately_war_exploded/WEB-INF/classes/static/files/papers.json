@@ -1,0 +1,14 @@
+[
+  {
+    "paperEnum": "WOVE_PAPER",
+    "description": "Has an even texture without any particular distinguishing features."
+  },
+  {
+    "paperEnum": "LAID_PAPER",
+    "description": "When held up to the light, shows parallel lines of greater or less width running across the stamp."
+  },
+  {
+    "paperEnum": "GRANITE_PAPER",
+    "description": "Has tiny specks of coloured fibre in it, which can usually be seen with the naked eye."
+  }
+]

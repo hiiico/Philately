@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Inverted Jenny",
+    "description": "Plane upside down",
+    "price": "2000",
+    "paper":"WOVE_PAPER",
+    "imageUrl": "img/inverted_jenny.png",
+    "addedBy": 1
+  },
+  {
+    "name": "Air mail",
+    "description": "San Francisco Bay Bridge",
+    "price": "49",
+    "paper":"WOVE_PAPER",
+    "imageUrl": "img/us_air_mail.png",
+    "addedBy": 2
+  },
+  {
+    "name": "Rock&Roll",
+    "description": "Elvis Presley",
+    "price": "100",
+    "paper":"WOVE_PAPER",
+    "imageUrl": "img/elvis.png",
+    "addedBy": 3
+  },
+  {
+    "name": "The Queen",
+    "description": "Queen Victoria",
+    "price": "123",
+    "paper":"LAID_PAPER",
+    "imageUrl": "https://storage.googleapis.com/hipstamp/p/a3c1f71ec016d084b4eb5f4201bc9b35-800.jpg",
+    "addedBy": 3
+  },
+  {
+    "name": "Australia",
+    "description": "Kangaroo",
+    "price": "20",
+    "paper":"GRANITE_PAPER",
+    "imageUrl": "https://www.australiangeographic.com.au/wp-content/uploads/2018/06/Australia_first-stamp_1913_2pd_kangaroo.jpg",
+    "addedBy": 3
+  }
+
+]
